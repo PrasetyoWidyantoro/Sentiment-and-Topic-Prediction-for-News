@@ -4,7 +4,7 @@
 
 Sentiment and Topic Prediction for News App: [https://sentiment-and-topic-prediction-for-news.streamlit.app/](https://sentiment-and-topic-prediction-for-news.streamlit.app/)
 
-Project Documentation: [https://prasetyowidyantoro.github.io/Documentation-for-Automated-Ad-Category-Prediction/](https://prasetyowidyantoro.github.io/Documentation-for-Automated-Ad-Category-Prediction/)
+Project Documentation: [https://prasetyowidyantoro.github.io/Sentiment-and-Topic-Prediction-for-News/](https://prasetyowidyantoro.github.io/Sentiment-and-Topic-Prediction-for-News/)
 
 ## Business Problem
 
