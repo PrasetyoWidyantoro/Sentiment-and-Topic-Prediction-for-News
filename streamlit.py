@@ -112,6 +112,13 @@ st.title("Sentiment and Topic Prediction for News")
 
 st.write("The Sentiment and Topic Prediction for News application allows users to predict sentiment and topic for news articles. Users can input news details via a form or upload a CSV file containing news data. The application then utilizes a prediction function to analyze the input data and provide predictions for sentiment and topic. Results are displayed to the user, allowing for quick analysis and understanding of the news content.")
 
+# Instructions for downloading CSV file
+st.write("If you want to try the 'Select Input Method CSV' feature, you can directly download the sample CSV file by clicking the link below:")
+# Short link to the CSV file
+csv_file_link = "https://drive.google.com/uc?export=download&id=14mQe8rBzHh4M-rtRJC43IfWgQAFMqBKW"
+# Create a hyperlink with the download attribute
+st.markdown(f'<a href="{csv_file_link}" download="sample.csv">Click here to download the CSV file</a>', unsafe_allow_html=True)
+
 st.write("Choose an input method to enter news details.")
 
 input_method = st.radio("Select Input Method", ("Form", "CSV"))
