@@ -35,13 +35,12 @@ Project Organization
     │   │   └── index.md                <- Documentation of the Sentiment and Topic Prediction for News Machine Learning project.
     │   ├── mkdocs.yaml                 <- Mkdocs configuration file.
     ├── model                           <- Trained and serialized models, model predictions, or model summaries.
-    ├── notebook_experiment             <- Directory for storing experimental notebooks.
     ├── src
     │   ├── api.py                       <- API service script.
     │   ├── function_1_data_pipeline.py  <- Data pipeline function.
     │   ├── function_2_data_processing.py<- Data processing function.
     │   ├── function_3_modeling.py       <- Modeling function.
-    │   ├── streamlit-deeplearning.py    <- Streamlit UI script.
+    │   ├── streamlit.py                 <- Streamlit UI script.
     │   └── util.py                      <- Utility script.
     ├── training_log                     <- Folder for storing training logs.
     ├── .dockerignore                    <- Docker ignore file.
