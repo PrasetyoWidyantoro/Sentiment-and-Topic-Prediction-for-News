@@ -2,7 +2,7 @@
 
 ## Important Links Related to Sentiment and Topic Prediction for News
 
-Sentiment and Topic Prediction for News App: [https://ai-based-post-categorization-prasetyo-widyantoro.streamlit.app/](https://ai-based-post-categorization-prasetyo-widyantoro.streamlit.app/)
+Sentiment and Topic Prediction for News App: [https://sentiment-and-topic-prediction-for-news.streamlit.app/](https://sentiment-and-topic-prediction-for-news.streamlit.app/)
 
 Project Documentation: [https://prasetyowidyantoro.github.io/Documentation-for-Automated-Ad-Category-Prediction/](https://prasetyowidyantoro.github.io/Documentation-for-Automated-Ad-Category-Prediction/)
 
