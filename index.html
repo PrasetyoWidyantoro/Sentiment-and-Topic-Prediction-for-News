@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="description" content="The objective of this project is to classify news articles into appropriate categories using a combination of topic modeling and sentiment analysis techniques" /><meta name="author" content="Prasetyo Widyantoro" />
+      <link rel="shortcut icon" href="img/favicon.ico" />
+    <title>Home - Sentiment and Topic Prediction for News</title>
+    <link rel="stylesheet" href="css/theme.css" />
+    <link rel="stylesheet" href="css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "DOKUMENTASI";
+        var mkdocs_page_input_path = "index.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="." class="icon icon-home"> Home - Sentiment and Topic Prediction for News
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="./search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href=".">DOKUMENTASI</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#important-links-related-to-sentiment-and-topic-prediction-for-news">Important Links Related to Sentiment and Topic Prediction for News</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#business-problem">Business Problem</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#business-objective">Business Objective</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#machine-learning-solution">Machine Learning Solution</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#machine-learning-metrics">Machine Learning Metrics</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#literature-review">Literature Review</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#end-to-end-machine-learning-process">End-to-End Machine Learning Process</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#data-annotation">Data Annotation</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#data-preparation">Data Preparation</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#dataset-definition">Dataset Definition</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#exploratory-data-analysis-eda">Exploratory Data Analysis (EDA)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#data-preprocessing">Data Preprocessing</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#data-modeling">Data Modeling</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#lightgbm">LightGBM:</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#logistic-regression">Logistic Regression:</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#machine-learning-services-architecture">Machine Learning Services Architecture</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#setting-up-sentiment-and-topic-prediction-for-news-with-docker">Setting Up "Sentiment and Topic Prediction for News" with Docker</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#docker-service">Docker Service</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#conclusion">Conclusion</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#further-research">Further Research</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#references">References</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="about/">TENTANG SAYA</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href=".">Home - Sentiment and Topic Prediction for News</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">DOKUMENTASI</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="sentiment-and-topic-prediction-for-news">Sentiment and Topic Prediction for News</h1>
+<h2 id="important-links-related-to-sentiment-and-topic-prediction-for-news">Important Links Related to Sentiment and Topic Prediction for News</h2>
+<p>Sentiment and Topic Prediction for News App: <a href="https://sentiment-and-topic-prediction-for-news.streamlit.app/">https://sentiment-and-topic-prediction-for-news.streamlit.app/</a></p>
+<p>Project Documentation: <a href="https://prasetyowidyantoro.github.io/Documentation-for-Automated-Ad-Category-Prediction/">https://prasetyowidyantoro.github.io/Documentation-for-Automated-Ad-Category-Prediction/</a></p>
+<h2 id="business-problem">Business Problem</h2>
+<p>In the ever-evolving landscape of digital news platforms, the Sentiment and Topic Prediction for News project focuses on accurately predicting the sentiment and topic classification for articles published on Kompas.com. The primary objective is to address the challenge of precisely identifying the sentiment and topic alignment of each news article, ensuring it authentically represents its content.</p>
+<p>The significance lies in the precision of prediction; it's crucial that each news article on Kompas.com is categorized with sentiment and topic labels that genuinely reflect its themes and emotional undertones. The ultimate aim is to enhance user experience on the platform by providing a system that effectively organizes news articles based on their sentiment and topic, facilitating easier navigation and engagement for readers. The success of this project is measured by its ability to streamline the prediction process, offering users a seamless and insightful platform for exploring news content on Kompas.com.</p>
+<h2 id="business-objective">Business Objective</h2>
+<p>The primary business objective of the Sentiment and Topic Prediction for News project is to enhance user engagement and satisfaction on the Kompas.com platform by providing accurate sentiment and topic predictions for news articles. This initiative aims to achieve several key goals:</p>
+<ol>
+<li>
+<p><strong>Improved User Experience:</strong> By accurately predicting sentiment and topic labels for news articles, the project seeks to improve the overall user experience on Kompas.com. Users will benefit from a more organized and intuitive platform that allows for easier navigation and discovery of relevant news content.</p>
+</li>
+<li>
+<p><strong>Personalized Content Delivery:</strong> Through precise sentiment and topic predictions, Kompas.com can offer users personalized content recommendations tailored to their interests and preferences. By understanding the sentiment and topic of each article, the platform can deliver more relevant and engaging content to its audience.</p>
+</li>
+<li>
+<p><strong>Enhanced Content Organization:</strong> The project aims to optimize content organization on Kompas.com by categorizing news articles based on sentiment and topic. This organized structure will enable users to explore news content more efficiently, leading to increased engagement and satisfaction.</p>
+</li>
+<li>
+<p><strong>Insightful Analytics:</strong> By analyzing sentiment trends and topic distributions across news articles, Kompas.com can gain valuable insights into user preferences and content consumption patterns. These insights can inform content curation strategies and platform enhancements, ultimately driving user engagement and retention.</p>
+</li>
+<li>
+<p><strong>Competitive Advantage:</strong> By implementing advanced sentiment and topic prediction capabilities, Kompas.com can differentiate itself from competitors and position itself as a leading provider of personalized and insightful news content. This competitive advantage can attract new users and retain existing ones, contributing to the platform's long-term success.</p>
+</li>
+</ol>
+<p>Overall, the business objective of the Sentiment and Topic Prediction for News project is to optimize user engagement, satisfaction, and retention on the Kompas.com platform through accurate and personalized content recommendations based on sentiment and topic analysis.</p>
+<h2 id="machine-learning-solution">Machine Learning Solution</h2>
+<p>The initial step in developing the Sentiment and Topic Prediction for News solution begins with the process of data annotation or labeling. Data from the news platform is processed using Topic Modeling techniques with Latent Dirichlet Allocation (LDA) to assign topic labels to each news article. The outcome of this process is topic labels covering various aspects of news, such as Weather and Environment, Vehicles and Transportation, Fashion, Style, Culture, and Tourism, as well as other topics.</p>
+<p>Furthermore, the sentiment of each news article is also annotated using a pretrained language model from Hugging Face. This model provides sentiment labels such as Negative, Neutral, and Positive for each news article.</p>
+<p>By conducting this data annotation, each news article has been assigned labels that depict the topic and sentiment contained within. The next step is to prepare the data for the classification process, aiming to predict the topic and sentiment of news articles accurately.</p>
+<p>Once the annotation process is complete, the data is meticulously prepared to ensure its quality in the classification process. This includes cleaning text from special characters, converting text to lowercase, and removing irrelevant words. Subsequently, important features are extracted from the text using vectorization techniques such as TF-IDF, allowing the text to be transformed into numerical representations that can be utilized by Machine Learning models.</p>
+<p>During the modeling phase, various Machine Learning and Deep Learning models are explored and evaluated. After numerous experiments, the chosen model for topic classification is logistic regression with parameter tuning, while for sentiment analysis, the selected model is LightGBM. These models are selected based on their performance and ability to generate accurate predictions for each news article.</p>
+<p>With this Machine Learning solution, it is expected to provide accurate predictions for the sentiment and topics of each news article on Kompas.com. This will enhance the user experience by providing a more structured and intuitive platform to navigate through various news articles. Additionally, this solution can assist readers in finding and engaging with content that is relevant to their interests and needs.</p>
+<h2 id="machine-learning-metrics">Machine Learning Metrics</h2>
+<p>Recall is a crucial machine learning metric for evaluating the performance of sentiment and topic prediction models in the context of news articles. Recall measures the proportion of true positive predictions out of all actual positive cases. In the context of sentiment prediction, high recall indicates that the model can effectively identify and classify positive, negative, and neutral sentiments from news articles. Similarly, in the context of topic prediction, high recall indicates that the model can accurately assign news articles to their respective topics, such as weather and environment, transportation, culture and tourism, government and programs, health and nutrition, finance and technology, crime, criminality, and public order, politics and sports.</p>
+<p>The evaluation of recall for both sentiment and topic prediction models is essential to ensure that the models can accurately capture the diversity of sentiments and topics present in news articles on the Kompas.com platform. By optimizing recall, the machine learning solution aims to provide users with reliable predictions that enhance their experience and engagement with news content.</p>
+<h2 id="literature-review">Literature Review</h2>
+<p><strong>Topic Modeling on WhatsApp User Reviews Using Latent Dirichlet Allocation</strong>
+This research employs Latent Dirichlet Allocation (LDA) to analyze 1710 user reviews of WhatsApp obtained from Google Play in August 2020. The research process involves five stages: problem identification, data retrieval, preprocessing, modeling, and analysis. The analysis results indicate the most frequently discussed topics, such as voice and video calls, call quality, as well as photo and video quality. We use perplexity as an indicator to determine the number of iterations and topics, where lower values indicate better model performance. The analysis phase includes observations of top terms and documents to label and describe the characteristics of each topic, enabling a better understanding of user preferences and experiences with WhatsApp. (Kharisudin, I., &amp; Masri'an, H.,2022)</p>
+<p><strong>Topic Modeling on Online News.Portal Using Latent Dirichlet Allocation (LDA)</strong>
+Online news portals often display a plethora of articles without indicating the topics being discussed. However, these articles can still be read and analyzed. In "Your News," you can find the main topics and trends being discussed. You need a quick and efficient way to discover the trending topics in the news. One method to address this issue is through topic modeling. Topic modeling is essential to enable users to easily and rapidly understand modern theme developments.One algorithm used in topic modeling is Latent Dirichlet Allocation (LDA). The research process begins with data collection, preprocessing, n-gram formation, dictionary representation, weighting, topic model validation, topic model formation, and topic modeling results. Based on the topic evaluation results, the best topic modeling values are obtained using coherence related to the number of passes and the number of topics, resulting in 20 passes, 5 topics with a coherence value of 0.53. This is considered sufficiently stable based on the standard coherence value (Fahlevvi, M. R., &amp; Azhari., 2020).</p>
+<p><strong>Multiclass Classification Model Based on the Combination of IndoBERT Embedding and Long Short-Term Memory for Indonesian-language Tweets</strong></p>
+<p>The combination of pre-trained IndoBERT and Long Short-Term Memory (LSTM) yields superior classification results, both on the original and modified datasets. The IndoBERT-LSTM model with optimal hyperparameters (batch size 16, learning rate 2e-5, and average pooling) achieves an F1-score of 98.90% on the original dataset and 92.83% on the modified dataset. The performance improvement of IndoBERT-LSTM over fine-tuned IndoBERT is not significantly pronounced (Iskandar Zulkarnain Maulana Putra et al., 2022).</p>
+<p><strong>Multi-Class Text Classification of Uzbek News Articles using Machine Learning</strong></p>
+<p>In this study, multiclass text classification is applied to texts written in the Uzbek language, specifically news articles from ten categories selected from the Uzbek online news edition "Daryo." Six different machine learning algorithms—Support Vector Machine (SVM), Decision Tree (DTC), Random Forest (RF), Logistic Regression (LR), and Naïve Bayes Multinomial (MNB)—are employed for multiclass text classification. TF-IDF algorithm and n-gram models at the word and character levels are utilized as feature extraction methods. The hyperparameter determination for text classification involves 5-fold cross-validation. Experimental results show the highest accuracy reaching 86.88% (Rabbimov &amp; Kobilov, 2020).</p>
+<p><strong>Building Multiclass Classification Model of Logistic Regression and Decision Tree Using the Chi-Square Test for Variable Selection Method.</strong></p>
+<p>Feature selection using a filter approach indicates that all predictor features depend on the target feature. Independent predictor features include the mother's pre-pregnancy diabetes history (X2), father's blood pressure (X3), father's psychological condition (X8), and drinking water quality (X10). These features serve as inputs to the classification model. The class label distribution in the dataset is imbalanced, with Class 0 dominating around 70% of Class 0 examples, while there are only 0.33% or 3 out of 900 Class 1 examples. This class label distribution imbalance can affect the acquisition of a better classification model. The Decision Tree model outperforms the Logistic Regression model. Performance metrics, including Accuracy, precision, recall, and F1-score, are 90%, 89%, 90%, and 89%, respectively, for Logistic Regression compared to 91%, 90%, 91%, and 90% for the Decision Tree model. Additionally, the Decision Tree model can demonstrate the importance of features in the separation process during model construction (Nugroho et al., 2022).</p>
+<h2 id="end-to-end-machine-learning-process">End-to-End Machine Learning Process</h2>
+<p>The process will encompass Data Annotation, data preparation, Exploratory Data Analysis (EDA), Data Preprocessing, Data Modeling, and culminate in a Machine Learning Service using APIs. The entire system will be integrated into a Streamlit application with Docker for containerization, and the deployment will be facilitated through the Streamlit Share server.</p>
+<h3 id="data-annotation">Data Annotation</h3>
+<p><strong>Data Annotation Architecture Diagram</strong>
+<img alt="1_data_annotation_sentiment" src="images/1_data_annotation_sentiment.png" /></p>
+<p><img alt="1_data_annotation_topic_modeling" src="images/1_data_annotation_topic_modeling.png" /></p>
+<p><strong>Result</strong></p>
+<p><img alt="1_data_annotation_topic_result" src="images/1_data_annotation_topic_result.png" />
+<img alt="1_data_annotation_topic_result_1" src="images/1_data_annotation_topic_result_1.png" />
+<img alt="1_data_annotation_topic_result_2" src="images/1_data_annotation_topic_result_2.png" /></p>
+<p>In this context, data annotation was conducted using two different methods to gain deep insights into the existing content. Firstly, by applying Topic Modeling technique using Latent Dirichlet Allocation (LDA), we successfully identified eight main topics within the data. Each topic was labeled based on keywords representing the essence of that topic, ranging from weather and environment to politics and sports.</p>
+<p>Additionally, we performed sentiment annotation on the data by leveraging a pre-trained language model. This model allowed us to classify the sentiment of each data entity into three categories: Negative, Neutral, or Positive.</p>
+<p>In evaluating the annotated data, we used the metrics of Perplexity Multicore and Coherence Score Multicore. A low Perplexity, such as the -8.23 we obtained, indicates better model performance. Meanwhile, a high Coherence Score, such as the 0.57 we achieved, signifies that the topics generated by the model have more consistent and meaningful interpretations. Thus, our annotated data results can be relied upon for further analysis in understanding and interpreting the existing content.</p>
+<h3 id="data-preparation">Data Preparation</h3>
+<p><strong>Data Preparation Architecture Diagram</strong>
+<img alt="1_multiclass_prep" src="images/1_multiclass_prep.png" /></p>
+<p>The data preparation process begins with reading raw data, followed by the definition of columns to be processed. This includes data validation, specifically checking data types, identifying duplicate data, and splitting the data into training, validation, and test sets. Finally, the processed data is saved before proceeding to the data preprocessing stage.</p>
+<h4 id="dataset-definition">Dataset Definition</h4>
+<p>Here are the data definitions for each column in the provided DataFrame, 25 columns and 24833 row:</p>
+<ol>
+<li><strong>Url</strong>: The URL of the article or webpage.</li>
+<li><strong>SiteID</strong>: Identifier for the website where the content was published.</li>
+<li><strong>SiteName</strong>: Name of the website where the content was published.</li>
+<li><strong>SectionID</strong>: Identifier for the section of the website where the content belongs.</li>
+<li><strong>SectionName</strong>: Name of the section of the website where the content belongs.</li>
+<li><strong>PublishedBy</strong>: Name of the individual or entity who published the content.</li>
+<li><strong>SupTitle</strong>: Supplementary title or subtitle of the content.</li>
+<li><strong>Title</strong>: Title of the content.</li>
+<li><strong>SubTitle</strong>: Subtitle or secondary title of the content, if available.</li>
+<li><strong>Description</strong>: Description or summary of the content.</li>
+<li><strong>AuthorName</strong>: Name of the author(s) of the content.</li>
+<li><strong>AuthorID</strong>: Identifier for the author(s) of the content.</li>
+<li><strong>Photo</strong>: Link or identifier for the photo associated with the content.</li>
+<li><strong>SourceName</strong>: Name of the original source of the content, if applicable.</li>
+<li><strong>Video</strong>: Link or identifier for the video associated with the content.</li>
+<li><strong>EmbedSocial</strong>: Information related to embedded social media content, if any.</li>
+<li><strong>Tag</strong>: Tags or keywords associated with the content.</li>
+<li><strong>Lipsus</strong>: Additional information or summary of the content.</li>
+<li><strong>Related</strong>: Related articles or content.</li>
+<li><strong>Keyword</strong>: Keywords associated with the content.</li>
+<li><strong>Content</strong>: The main textual content of the article or webpage.</li>
+<li><strong>UrlShort</strong>: Shortened URL of the article or webpage.</li>
+<li><strong>PublishedDate</strong>: Date when the content was published.</li>
+<li><strong>sentiment</strong>: Sentiment analysis result indicating whether the content has a negative, neutral, or positive sentiment.</li>
+<li><strong>topic</strong>: Labels generated from topic modeling for categorizing the content of news articles.</li>
+</ol>
+<p>These definitions provide a clear understanding of the information stored in each column of the DataFrame.</p>
+<h3 id="exploratory-data-analysis-eda">Exploratory Data Analysis (EDA)</h3>
+<p><strong>Exploratory Data Analysis (EDA) Architecture Diagram</strong>
+<img alt="2_multiclass_EDA" src="images/2_multiclass_EDA.png" /></p>
+<p>Next is the Exploratory Data Analysis (EDA) phase. In this stage, exploration of the data is conducted to gain a deeper understanding. The process includes several steps. Firstly, Basic Text Exploration is performed, such as finding the "Content" with the longest and shortest names, examining products with titles containing specific characteristics, searching for rows containing punctuation or special characters, and finding rows with multiple spaces in the title column. Secondly, Data Proportion analysis is carried out by checking the proportion of data in terms of both the count and percentage of target labels. Thirdly, Text Representation involves representing words in text data. then, a WordCloud is generated to visualize word frequency, lastly, social network analysis, Time series analysis, outlier detection, and correlation analysis.</p>
+<h3 id="data-preprocessing">Data Preprocessing</h3>
+<p><strong>Data Preprocessing Architecture</strong>
+<img alt="3_multiclass_preproc" src="images/3_multiclass_preproc.png" /></p>
+<p>Moving on to the Data Preprocessing stage, the initial step after reading the data prepared in the Data Preparation phase is the execution of post-EDA (Exploratory Data Analysis) actions, which are mandatory. These actions involve various operations aimed at cleaning and transforming the textual data to make it suitable for analysis. </p>
+<p>Firstly, we perform operations such as removing special characters, converting text to lowercase, removing stopwords (commonly occurring words that do not carry significant meaning), and joining the words with a single space. These operations help standardize the text and eliminate noise from the data.</p>
+<p>Following this, the data undergoes transformation using Term Frequency-Inverse Document Frequency (TF-IDF) vectorization. TF-IDF assigns weights to unique and important words in a document, thereby distinguishing one document from another based on the frequency and importance of words.</p>
+<p>Additionally, label encoding is applied to the target data, both for topics and sentiment. For topics, the label encoding maps each topic category to a numerical value. Similarly, for sentiment analysis, the label encoding assigns numerical values to sentiment categories (Negative, Neutral, Positive).</p>
+<p>It's worth noting that stemming or lemmatizing processes are not performed in this preprocessing stage due to their computational intensity and resource requirements, which exceed the available resources at our disposal.</p>
+<p>Label to Number Mapping (topic):
+Cuaca dan Lingkungan: 0,
+Kendaraan dan Transportasi: 1, 
+Mode, Gaya, Kebudayaan, dan Pariwisata: 2,
+Pemerintahan dan Program: 3,
+Kesehatan dan Gizi: 4,
+Keuangan dan Teknologi: 5,
+Kejahatan, Kriminalitas dan Ketertiban Umum: 6,
+Politik dan Olahraga: 7.</p>
+<p>Label to Number Mapping (sentiment):
+Negative: 0,
+Neutral: 1,
+Positive: 2,</p>
+<h3 id="data-modeling">Data Modeling</h3>
+<p><strong>Data Modeling Architecture</strong>
+<img alt="4_multiclass_modeling" src="images/4_multiclass_modeling.png" /></p>
+<p>Once the data from the preprocessing stage is saved, it is loaded into the data modeling phase. Subsequently, the data undergoes the modeling process with experiments using various models such as extratrees, xgboost, gradient boosting, SVC, logistic regression, lightgbm, and deep learning. However, the best results, with the optimal evaluation metric values, are obtained using the lighgbm and Logistic Regression model, achieving a Test recall of 0.86 (topic) and 0.77 (sentiment).</p>
+<h2 id="lightgbm">LightGBM:</h2>
+<p>LightGBM is a powerful gradient boosting framework that stands out in multiclass classification tasks due to its remarkable speed and accuracy. It operates by iteratively training a series of decision trees, with each subsequent tree aiming to rectify the errors made by the preceding ones.</p>
+<p>Instead of splitting the tree depth-wise like traditional methods, LightGBM adopts a leaf-wise tree growth strategy. This means it expands the tree node by node, selecting the split that offers the maximum reduction in the loss function. By doing so, LightGBM can efficiently find optimal splits, leading to faster and more effective model training.</p>
+<p>In multiclass classification, LightGBM minimizes a specified loss function, typically the cross-entropy loss, to optimize its predictions. This loss function quantifies the difference between the predicted and actual class labels for each sample. By minimizing this loss, LightGBM improves its predictive accuracy across multiple classes.</p>
+<p>In essence, LightGBM is highly efficient for multiclass classification, leveraging gradient boosting techniques and optimized tree growth strategies to achieve superior performance.</p>
+<h2 id="logistic-regression">Logistic Regression:</h2>
+<p>Logistic Regression serves as a foundational algorithm for multiclass classification tasks, valued for its simplicity and interpretability. It predicts the probability that each input belongs to each class using the logistic function, also known as the sigmoid function.</p>
+<p>The logistic function transforms the linear combination of input features and their respective coefficients into probabilities. Each class's probability is then calculated using the softmax function, which normalizes the probabilities across all classes.</p>
+<p>During training, logistic regression adjusts its coefficients to minimize a specific loss function, typically the cross-entropy loss. This loss function quantifies the discrepancy between the predicted and true class labels for each sample. By iteratively minimizing this loss, logistic regression optimizes its parameters to make accurate predictions across multiple classes.</p>
+<p>In summary, logistic regression is a straightforward and interpretable algorithm for multiclass classification, making it suitable for tasks where model interpretability is crucial.</p>
+<p><strong>Classification Report Sentiment</strong></p>
+<p><img alt="Modeling_3_Classification_Report_Sentiment" src="images/Modeling_3_Classification_Report_Sentiment.png" /></p>
+<p><strong>Classification Report Topic</strong></p>
+<p><img alt="Modeling_3_Classification_Report_Topic" src="images/Modeling_3_Classification_Report_Topic.png" /></p>
+<h2 id="machine-learning-services-architecture">Machine Learning Services Architecture</h2>
+<p><img alt="5_multiclass_mlservice" src="images/5_multiclass_mlservice.png" /></p>
+<ul>
+<li>
+<p>The machine learning service process begins with user input, where the provided data is converted into a Pandas dataframe. The input data undergoes a data defense process to ensure compatibility with the pre-trained model. Subsequently, special characters are removed, and the text is converted to lowercase. Stopwords are then removed, and the remaining words are joined with a single space. The cleansed data undergoes transformation using TFIDF, and finally, predictions are made using the pre-trained model saved during the data modeling phase.</p>
+</li>
+<li>
+<p>During the prediction phase, users input data through the Streamlit web interface, serving as the front end of the application. Upon the user's click on "Predict," the data is sent as a request to the back end. The back end processes the request and responds with the prediction results to the user.</p>
+</li>
+<li>
+<p>This architecture ensures a seamless interaction between the user interface, data preprocessing, and model prediction, providing an end-to-end machine learning service for efficient and user-friendly predictions. The API framework employed in the Machine Learning Service process is FASTAPI, and the front end utilizes Streamlit.</p>
+</li>
+<li>
+<p>Following the various processes and saving the model, the next step involves deployment using API and Streamlit. The image below provides an example of accessing ML Services through FASTAPI Swagger UI.</p>
+</li>
+</ul>
+<p>Here is an example of input data used to access the API:</p>
+<p><strong>Prediction using API with FASTAPI</strong></p>
+<p><img alt="API_1_FastApi" src="images/API_1_FastApi.png" /></p>
+<ul>
+<li>This demonstrates the seamless interaction between the user interface, data preprocessing, model prediction, and the API, providing a user-friendly and accessible method for making predictions. To enhance user-friendliness and provide a more powerful interface, users are presented with a simple application built using Streamlit services. Here's an example of how it can be utilized.</li>
+</ul>
+<p><strong>Prediction using provided form</strong></p>
+<p><img alt="ML_Service_1_Streamlit" src="images/ML_Service_1_Streamlit.png" /></p>
+<p><img alt="ML_Service_1_Streamlit_1" src="images/ML_Service_1_Streamlit_1.png" /></p>
+<p><strong>Prediction using CSV file</strong></p>
+<p><img alt="ML_Service_2_Streamlit" src="images/ML_Service_2_Streamlit.png" /></p>
+<h2 id="setting-up-sentiment-and-topic-prediction-for-news-with-docker">Setting Up "Sentiment and Topic Prediction for News" with Docker</h2>
+<p>To set up the "Sentiment and Topic Prediction for News" using Docker, follow these steps:</p>
+<ol>
+<li>Ensure that you have cloned the repository for this program.</li>
+<li>Install a virtual environment.</li>
+<li>Activate the created virtual environment.</li>
+<li>Install the required packages listed in <code>requirements.txt</code> by executing:
+   <code>pip install -r requirements.txt</code></li>
+<li>Make sure Docker is activated and that you are logged in.</li>
+<li>Run the following script in the terminal with the activated virtual environment:
+   <code>docker compose up -d --build</code></li>
+<li>The "Sentiment and Topic Prediction for News" Machine Learning Service is now ready for use.</li>
+<li>Access the API documentation at <a href="http://localhost:8080/docs">http://localhost:8080/docs</a> and the UI Front End (Streamlit) at <a href="http://localhost:8501">http://localhost:8501</a>.</li>
+</ol>
+<h3 id="docker-service">Docker Service</h3>
+<p>The following are the results of inputting the service into a Docker container:
+<img alt="Docker_Container" src="images/Docker_Container.png" /></p>
+<p>The following are the results of inputting the service into:</p>
+<p><img alt="Docker_Image" src="images/Docker_Image.png" /></p>
+<h2 id="conclusion">Conclusion</h2>
+<p>After thorough experimentation, the LightGBM and Logistic Regression emerged as the top-performing model, achieving an impressive recall of 0.86 (Topic) and 0.78 (Sentiment). Notably, the satisfactory results were attained without the need for data augmentation or balancing.</p>
+<p>Sentiment and Topic Prediction for News project embodies a comprehensive end-to-end machine learning solution, encompassing vital stages such as data preparation, exploratory data analysis, data preprocessing, data modeling, and machine learning services. The implementation strategically employs a LightGBM and Logistic Regression to predict Sentiment and Topic Prediction for News, placing a strong emphasis on achieving precision in categorization.</p>
+<p>The selected model is fine-tuned to optimize for high recall, ensuring accurate detection of products genuinely belonging to specific categories. The integration of machine learning services through API and Streamlit provides users with a seamless and user-friendly interface for inputting data and receiving predictions effortlessly. Furthermore, the Dockerization of services using Docker Compose facilitates straightforward deployment and scalability.</p>
+<p>In essence, the Sentiment and Topic Prediction for News Prediction project serves as a testament to the transformative power of machine learning in enhancing user experience. It establishes an efficient and intuitive system for organizing and categorizing classified Sentiment and Topic Prediction for News.</p>
+<h2 id="further-research">Further Research</h2>
+<ol>
+<li>
+<p><strong>Exploration with Pre-trained Models:</strong>
+   Conducting further exploration using advanced pre-trained models such as BERT, GPT, and others.</p>
+</li>
+<li>
+<p><strong>Evaluation and Application of Data Balancing Techniques:</strong>
+   Assessing and implementing data balancing techniques like oversampling or undersampling to address class imbalances.</p>
+</li>
+<li>
+<p><strong>Collaboration with Domain Experts:</strong>
+   Involving collaboration with domain experts and stakeholders to ensure the model adds value in relevant contexts.</p>
+</li>
+<li>
+<p><strong>Utilizing High-Resource Environments for Experimentation:</strong>
+   Leveraging high-resource environments to expedite processes and enable experimentation with stemming and lemmatization techniques. This allows for comprehensive exploration of text preprocessing methods to enhance model performance and efficiency.</p>
+</li>
+</ol>
+<p>These proposed steps aim to enhance the model's performance, explore advanced methodologies, and ensure applicability in real-world scenarios through collaborative efforts.</p>
+<h2 id="references">References</h2>
+<ul>
+<li>https://medium.com/@listari.tari/topic-modelling-menggunakan-latent-dirchlect-allocation-part-1-pre-processing-data-dengan-python-87bf5c580923</li>
+<li>https://towardsdatascience.com/end-to-end-topic-modeling-in-python-latent-dirichlet-allocation-lda-35ce4ed6b3e0</li>
+<li><a href="https://www.projectpro.io/article/multi-class-classification-python-example/547?source=post_page-----81975d03e4a3--------------------------------">Multi-Class Classification in Python Example</a></li>
+<li><a href="https://towardsdatascience.com/comprehensive-guide-to-multiclass-classification-with-sklearn-127cc500f362?source=post_page-----81975d03e4a3--------------------------------">Comprehensive Guide to MultiClass Classification with Scikit-Learn</a></li>
+<li><a href="https://www.kaggle.com/code/satishgunjal/binary-multiclass-classification-using-sklearn?source=post_page-----81975d03e4a3--------------------------------#Train-and-Evaluate-a-Binary-Classification-Model">Binary MultiClass Classification using Scikit-Learn</a></li>
+<li><a href="https://builtin.com/machine-learning/multiclass-classification">Understanding Multi-Class Classification</a></li>
+<li>Iskandar Zulkarnain Maulana Putra, T., Farhan Bukhori, A., Ilmu Pengetahuan Alam, dan, &amp; Gadjah Mada, U. (2022). <a href="https://doi.org/10.35912/jisted.v1i1.1509">Model Klasifikasi Berbasis Multiclass Classification dengan Kombinasi Indobert Embedding dan Long Short-Term Memory untuk Tweet Berbahasa Indonesia</a> (Classification Model Based on Multiclass Classification with a Combination of Indobert Embedding and Long Short-Term Memory for Indonesian-language Tweets). <em>Jurnal Ilmu Siber Dan Teknologi Digital (JISTED)</em>, 1(1), 1–28.</li>
+<li>Nugroho, W. H., Handoyo, S., Akri, Y. J., &amp; Sulistyono, A. D. (2022). <a href="https://doi.org/10.55463/issn.1674-2974.49.4.17">Building Multiclass Classification Model of Logistic Regression and Decision Tree Using the Chi-Square Test for Variable Selection Method</a>. <em>Journal of Hunan University Natural Sciences</em>, 49(4), 172–181.</li>
+<li>Rabbimov, I. M., &amp; Kobilov, S. S. (2020). <a href="https://doi.org/10.1088/1742-6596/1546/1/012097">Multi-Class Text Classification of Uzbek News Articles using Machine Learning</a>. <em>Journal of Physics: Conference Series</em>, 1546(1).</li>
+<li>Kharisudin, I., &amp; Masri'an, H. (2022). Topic Modeling on WhatsApp User Reviews Using Latent Dirichlet Allocation. Scientific Journal of Informatics, 9(1), 51-62. doi:https://doi.org/10.15294/sji.v9i1.34941</li>
+<li>Liu B, Hu M, Cheng J (2005) Opinion observer: Analyzing and comparing opinions on the web In: Proceedings of the 14th International Conference on World Wide Web, WWW ’05, 342–351.. ACM, New York, NY, USA.</li>
+<li>Herlawati, H., Handayanto, R. T., Atika, P. D., Khasanah, F. N., Yusuf, A. Y. P., &amp; Septia, D. Y. (2021). Analisis Sentimen Pada Situs Google Review dengan Naïve Bayes dan Support Vector Machine. Jurnal Komtika (Komputasi Dan Informatika), 5(2), 153–163. https://doi.org/10.31603/komtika.v5i2.6280</li>
+<li>Fransiska, S., &amp; Irham Gufroni, A. (2020). Sentiment Analysis Provider by.U on Google Play Store Reviews with TF-IDF and Support Vector Machine (SVM) Method. Scientific Journal of Informatics, 7(2), 2407–7658. http://journal.unnes.ac.id/nju/index.php/sji</li>
+<li>https://github.com/bryanoliveira/topic-modeling-lda/blob/main/twitter-support-topic-modeling.ipynb</li>
+<li>https://github.com/Nolanogenn/lda_topic_modeling/blob/master/topic_modelling_lda/topic%20modeling%20with%20lda.ipynb</li>
+<li>https://github.com/ktnegron/NLP-BBCNews-LDA-TopicModelling/blob/main/NLP_BBC_topic_modelling_%20.ipynb</li>
+<li>https://github.com/rsreetech/LDATopicModelling/blob/main/LDADemo.ipynb</li>
+<li>https://www.cs.wm.edu/~sunil/Topic%20Modeling.html</li>
+</ul>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="about/" class="btn btn-neutral float-right" title="TENTANG SAYA">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>Prasetyowidyantoro12@2024</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+    
+      <span><a href="about/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = ".";</script>
+    <script src="js/theme_extra.js"></script>
+    <script src="js/theme.js"></script>
+      <script src="search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
+
+<!--
+MkDocs version : 1.5.3
+Build Date UTC : 2024-03-24 07:37:40.266680+00:00
+-->
