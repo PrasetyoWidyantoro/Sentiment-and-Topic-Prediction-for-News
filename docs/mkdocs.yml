@@ -1,0 +1,9 @@
+site_name: Home - Sentiment and Topic Prediction for News
+site_description: The objective of this project is to classify news articles into appropriate categories using a combination of topic modeling and sentiment analysis techniques
+site_author: Prasetyo Widyantoro
+copyright: Prasetyowidyantoro12@2024
+nav:
+  - DOKUMENTASI: index.md
+  - TENTANG SAYA: about.md
+theme: 
+  name: readthedocs
