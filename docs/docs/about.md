@@ -6,4 +6,4 @@ The Sentiment and Topic Prediction for News application enables users to predict
 
 * Penulis : Prasetyo Widyantoro (LinkedIn: [prasetyo_widyantoro](https://www.linkedin.com/in/prasetyowidyantoro/))
 * Versi Terbaru : `1.0.0`
-* Update Terbaru : `27-February-2024`
+* Update Terbaru : `24-March-2024`
